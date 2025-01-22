@@ -10,7 +10,6 @@ from django.views.decorators.csrf import csrf_exempt
 from django.http import JsonResponse
 from pytubefix import YouTube
 import assemblyai as aai
-# import openai
 import google.generativeai as genai
 from urllib.request import Request, urlopen
 from .models import BlogPost
@@ -81,21 +80,6 @@ def get_transcription(link):
     transcript = transcriber.transcribe(audio_file)
 
     return transcript.text
-
-# def generate_blog_from_transcription(transcription):
-    # openai.api_key = <open api key>
-
-#     prompt = f"Based on the following transcript from a YouTube video, write a comprehensive blog article, write it based on the transcript, but do not make it look like a YouTube video, make it look like a proper blog article:\n\n{transcription}\n\nArticle:"
-
-#     response = openai.Completion.create(
-#         model="davinci-002",
-#         prompt=prompt,
-#         max_token=1000
-#     )
-
-#     generated_content = response.choices[0].text.strip()
-
-#     return generated_content
 
 def generate_blog_from_transcription(transcription):
     genai.configure(api_key='AIzaSyC-l6LVFUOYBPGvA8FH1cP_CIH1kwApBBU')
