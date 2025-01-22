@@ -26,9 +26,11 @@ SECRET_KEY = 'django-insecure-yw5eikej-0*x4gkir$mfad!s&-l!+w2b7law122jr_@svx^y^0
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["ai-article-generator-1.onrender.com/WEB"]
-CSRF_TRUSTED_ORIGINS = ["https://*.ai-article-generator-1.onrender.com/WEB"]
-CORS_ORIGIN_WHITELIST = ['https://*.ai-article-generator-1.onrender.com/WEB']
+ALLOWED_HOSTS = ["ai-article-generator-1.onrender.com"]
+CSRF_TRUSTED_ORIGINS = ["https://*.ai-article-generator-1.onrender.com"]
+CSRF_TRUSTED_ORIGINS = ["https://*.WEB"]
+CORS_ORIGIN_WHITELIST = ['https://*.ai-article-generator-1.onrender.com']
+CORS_ORIGIN_WHITELIST = ['https://*.WEB']
 
 
 # Application definition
