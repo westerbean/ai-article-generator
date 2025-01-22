@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-yw5eikej-0*x4gkir$mfad!s&-l!+w2b7law122jr_@svx^y^0
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["ai-article-generator-1.onrender.com"]
 
 
 # Application definition
