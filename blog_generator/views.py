@@ -30,7 +30,7 @@ def generate_blog(request):
     if request.method == 'POST':
         try:
             data = json.loads(request.body)
-            yt_link = data['link', 'WEB']
+            yt_link = data['link']
         except (KeyError, json.JSONDecodeError):
             return JsonResponse({'error': 'Invalid data sent'}, status=400)
         
@@ -59,12 +59,12 @@ def generate_blog(request):
         return JsonResponse({'error': 'Invalid request method'}, status=405)
 
 def yt_title(link):
-    yt = YouTube(link, 'WEB')
+    yt = YouTube(link, use_po_token=True)
     title = yt.title
     return title
 
 def download_audio(link):
-    yt = YouTube(link, 'WEB')
+    yt = YouTube(link, use_po_token=True)
     video = yt.streams.filter(only_audio=True).first()
     out_file = video.download(output_path=settings.MEDIA_ROOT)
     base, ext = os.path.splitext(out_file)
