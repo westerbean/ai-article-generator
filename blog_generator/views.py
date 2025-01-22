@@ -59,12 +59,12 @@ def generate_blog(request):
         return JsonResponse({'error': 'Invalid request method'}, status=405)
 
 def yt_title(link):
-    yt = YouTube(link, use_po_token=True)
+    yt = YouTube(link, use_oauth=True)
     title = yt.title
     return title
 
 def download_audio(link):
-    yt = YouTube(link, use_po_token=True)
+    yt = YouTube(link, use_oauth=True)
     video = yt.streams.filter(only_audio=True).first()
     out_file = video.download(output_path=settings.MEDIA_ROOT)
     base, ext = os.path.splitext(out_file)
