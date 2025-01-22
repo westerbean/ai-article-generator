@@ -30,11 +30,11 @@ def generate_blog(request):
     if request.method == 'POST':
         try:
             data = json.loads(request.body)
-            yt_link = data['link']
+            yt_link = data['link', 'WEB']
         except (KeyError, json.JSONDecodeError):
             return JsonResponse({'error': 'Invalid data sent'}, status=400)
         
-        title = yt_title(yt_link, 'WEB')
+        title = yt_title(yt_link)
 
         transcription = get_transcription(yt_link)
         if not transcription:
