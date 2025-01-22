@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-yw5eikej-0*x4gkir$mfad!s&-l!+w2b7law122jr_@svx^y^0
 DEBUG = True
 
 ALLOWED_HOSTS = ["ai-article-generator-1.onrender.com"]
-CSRF_TRUSTED_ORIGINS = ['http://ai-article-generator-1.onrender.com']
+CSRF_TRUSTED_ORIGINS = ['http://ai-article-generator-1.onrender.com/signup']
 CORS_ORIGIN_WHITELIST = ['http://ai-article-generator-1.onrender.com']
 
 
