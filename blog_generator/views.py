@@ -34,7 +34,7 @@ def generate_blog(request):
         except (KeyError, json.JSONDecodeError):
             return JsonResponse({'error': 'Invalid data sent'}, status=400)
         
-        title = yt_title(yt_link)
+        title = yt_title(yt_link, 'WEB')
 
         transcription = get_transcription(yt_link)
         if not transcription:
