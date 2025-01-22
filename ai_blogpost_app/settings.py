@@ -85,12 +85,12 @@ WSGI_APPLICATION = 'ai_blogpost_app.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'blogdatabase_z9fu',
-        'USER': 'westerbean1',
-        'PASSWORD': 'MZSBtqRUSIWFvKT2yH9qFvpmEsaSeIm0',
-        'HOST': 'dpg-cu7vaat2ng1s73e46j90-a.oregon-postgres.render.com',
-        'PORT': '5432',
+        'ENGINE': "django.db.backends.postgresql",
+        'NAME': "blogdatabase_z9fu",
+        'USER': "westerbean1",
+        'PASSWORD': "MZSBtqRUSIWFvKT2yH9qFvpmEsaSeIm0",
+        'HOST': "dpg-cu7vaat2ng1s73e46j90-a.oregon-postgres.render.com",
+        'PORT': "5432",
     }
 }
 

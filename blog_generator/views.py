@@ -75,7 +75,7 @@ def download_audio(link):
 
 def get_transcription(link):
     audio_file = download_audio(link)
-    aai.settings.api_key = "7e0c2354c51b4feea02f767094699765"
+    aai.settings.api_key = '7e0c2354c51b4feea02f767094699765'
 
     transcriber = aai.Transcriber()
     transcript = transcriber.transcribe(audio_file)
@@ -83,8 +83,7 @@ def get_transcription(link):
     return transcript.text
 
 # def generate_blog_from_transcription(transcription):
-#     openai.api_key = "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"
-#     # openai.api_key = "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"
+    # openai.api_key = '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'
 
 #     prompt = f"Based on the following transcript from a YouTube video, write a comprehensive blog article, write it based on the transcript, but do not make it look like a YouTube video, make it look like a proper blog article:\n\n{transcription}\n\nArticle:"
 
@@ -99,7 +98,7 @@ def get_transcription(link):
 #     return generated_content
 
 def generate_blog_from_transcription(transcription):
-    genai.configure(api_key="AIzaSyC-l6LVFUOYBPGvA8FH1cP_CIH1kwApBBU")
+    genai.configure(api_key='AIzaSyC-l6LVFUOYBPGvA8FH1cP_CIH1kwApBBU')
 
     model = genai.GenerativeModel("gemini-1.5-flash")
     prompt = f"Based on the following transcript from a YouTube video, write a comprehensive blog article, write it based on the transcript, but do not make it look like a YouTube video, make it look like a proper blog article:\n\n{transcription}\n\nArticle: answer should also be less than 200 words"
