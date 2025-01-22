@@ -27,9 +27,8 @@ SECRET_KEY = 'django-insecure-yw5eikej-0*x4gkir$mfad!s&-l!+w2b7law122jr_@svx^y^0
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["ai-article-generator-1.onrender.com", 'https://*.WEB']
-CSRF_TRUSTED_ORIGINS = ["https://*.ai-article-generator-1.onrender.com", "https://*.WEB"]
-CORS_ORIGIN_WHITELIST = ['https://*.ai-article-generator-1.onrender.com', "https://*.WEB"]
+ALLOWED_HOSTS = []
+
 
 
 # Application definition
@@ -88,12 +87,12 @@ WSGI_APPLICATION = 'ai_blogpost_app.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': "django.db.backends.postgresql",
-        'NAME': "blogdatabase_z9fu",
-        'USER': "westerbean1",
-        'PASSWORD': "MZSBtqRUSIWFvKT2yH9qFvpmEsaSeIm0",
-        'HOST': "dpg-cu7vaat2ng1s73e46j90-a.oregon-postgres.render.com",
-        'PORT': "5432",
+        'ENGINE': "ENGINE",
+        'NAME': "NAME",
+        'USER': 'USER',
+        'PASSWORD': "PASSWORD",
+        'HOST': "HOST",
+        'PORT': "PORT",
     }
 }
 
